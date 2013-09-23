@@ -1,0 +1,19 @@
+
+Data of objects from package myth.model is GAME DATA
+
+FORMATIONS ARE USER DATA, to allow user to potentially customize their
+formations and use them in multiplayer
+
+Data of objects from package myth.state are game state information and mostly
+used for during active play and for save files
+
+Some items have to have the data access dealt with manually
+	These would be the list types, and keyed types
+		AttackList - GList
+		DamageList - GList
+		SequenceList - GList
+		SoundList - GList
+		StringList - GList
+		ProjItemList - GList
+		SequenceSet - GMap
+		TerrainSet - GMap

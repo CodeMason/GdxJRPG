@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jsandusky.shooter"
+    android:versionCode="6"
+    android:versionName="1.1" >
+
+    <uses-sdk android:minSdkVersion="5" android:targetSdkVersion="15" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+        
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name="com.jsandusky.shooter.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="FragActivity" android:screenOrientation="landscape">
+            
+        </activity>
+        <activity android:name=".library.LibraryAct" android:screenOrientation="landscape"></activity>
+        <activity android:name="PlayAct" android:screenOrientation="landscape"></activity>
+        <activity android:name=".lobby.LobbyAct" android:screenOrientation="landscape"></activity>
+        <activity android:name=".options.LobbyAct" android:screenOrientation="landscape"></activity>
+        <activity android:name=".matchbrowser.BrowserAct" android:screenOrientation="landscape"></activity>
+        <activity android:name="HelpActivity" android:label="Intrinsic Violence - Manual"></activity>
+        <activity android:name="EditorHelpActivity" android:label="Intrinsic Violence: Editor Help"></activity>		
+    </application>
+
+</manifest>

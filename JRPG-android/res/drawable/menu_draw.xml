@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+    <shape>
+        <gradient
+            android:angle="90"
+            android:endColor="#FF000000"
+            android:startColor="#FF600400"
+            android:type="linear" />
+    </shape>
+	</item>
+    <item>
+	<bitmap  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:src="@drawable/diagonal_line"
+        android:tileMode="repeat"
+        android:dither="false"
+        >
+	</bitmap>
+</item>
+</layer-list>

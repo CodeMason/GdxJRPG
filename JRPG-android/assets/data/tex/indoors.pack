@@ -1,0 +1,572 @@
+
+indoors.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+defeat
+  rotate: false
+  xy: 1, 828
+  size: 430, 168
+  orig: 430, 168
+  offset: 0, 0
+  index: -1
+victory
+  rotate: false
+  xy: 1, 658
+  size: 430, 168
+  orig: 430, 168
+  offset: 0, 0
+  index: -1
+bulkheadhatch
+  rotate: false
+  xy: 433, 771
+  size: 225, 225
+  orig: 225, 225
+  offset: 0, 0
+  index: -1
+sys_frag_explode
+  rotate: false
+  xy: 1, 506
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: 1
+sys_frag_explode
+  rotate: false
+  xy: 660, 846
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: 2
+sys_frag_explode
+  rotate: false
+  xy: 1, 354
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: 3
+sys_frag_explode
+  rotate: false
+  xy: 153, 506
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: 4
+sys_frag_explode
+  rotate: false
+  xy: 812, 846
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: 5
+sys_frag_explode
+  rotate: false
+  xy: 1, 202
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: 6
+sys_frag_explode
+  rotate: false
+  xy: 153, 354
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: 7
+basictile
+  rotate: false
+  xy: 433, 694
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+cautiondiamond
+  rotate: false
+  xy: 305, 581
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+cautionpaint
+  rotate: false
+  xy: 1, 125
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+cautionyellow
+  rotate: false
+  xy: 153, 277
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+crossbeam
+  rotate: false
+  xy: 510, 694
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+diamondplate
+  rotate: false
+  xy: 305, 504
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+doorclosed
+  rotate: false
+  xy: 1, 48
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+dooropen
+  rotate: false
+  xy: 305, 427
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+extramarkings
+  rotate: false
+  xy: 660, 769
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+gen_dead
+  rotate: false
+  xy: 737, 769
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+gen_down
+  rotate: false
+  xy: 814, 769
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+gen_running
+  rotate: false
+  xy: 78, 125
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+grating
+  rotate: false
+  xy: 78, 48
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+hatch
+  rotate: false
+  xy: 230, 277
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+redstriplights
+  rotate: false
+  xy: 891, 769
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+ribbedfloor
+  rotate: false
+  xy: 382, 581
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+roundedfloor
+  rotate: false
+  xy: 382, 504
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+slightribbedtile
+  rotate: false
+  xy: 382, 427
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_autocannon
+  rotate: false
+  xy: 459, 617
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_blip
+  rotate: false
+  xy: 459, 540
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_blood_corner
+  rotate: false
+  xy: 459, 463
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_blood_edge
+  rotate: false
+  xy: 536, 617
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_blood_full
+  rotate: false
+  xy: 536, 540
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_blood_solo
+  rotate: false
+  xy: 536, 463
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: 1
+sys_blood_solo
+  rotate: false
+  xy: 459, 386
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: 2
+sys_blood_solo
+  rotate: false
+  xy: 536, 386
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: 3
+sys_blood_solo
+  rotate: false
+  xy: 307, 350
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: 4
+sys_blood_spray
+  rotate: false
+  xy: 307, 273
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: 1
+sys_blood_spray
+  rotate: false
+  xy: 384, 309
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: 2
+sys_blood_spray
+  rotate: false
+  xy: 461, 309
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: 3
+sys_blood_spray
+  rotate: false
+  xy: 538, 309
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: 4
+sys_bomb
+  rotate: false
+  xy: 384, 232
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_dead_marine
+  rotate: false
+  xy: 461, 232
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_dead_stealer
+  rotate: false
+  xy: 538, 232
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_defend
+  rotate: false
+  xy: 155, 200
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_entrance
+  rotate: false
+  xy: 155, 123
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_fire
+  rotate: false
+  xy: 155, 46
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: 1
+sys_fire
+  rotate: false
+  xy: 232, 196
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: 2
+sys_fire
+  rotate: false
+  xy: 232, 119
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: 3
+sys_flamer
+  rotate: false
+  xy: 232, 42
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_icon_crouch
+  rotate: false
+  xy: 309, 155
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_icon_jam
+  rotate: false
+  xy: 309, 78
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_icon_overwatch
+  rotate: false
+  xy: 386, 155
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_icon_stun
+  rotate: false
+  xy: 386, 78
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_marine
+  rotate: false
+  xy: 463, 155
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_message
+  rotate: false
+  xy: 463, 78
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_move
+  rotate: false
+  xy: 540, 155
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_move_diagonal
+  rotate: false
+  xy: 540, 78
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_muzzle_heavy
+  rotate: false
+  xy: 309, 1
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_muzzle_small
+  rotate: false
+  xy: 386, 1
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_notice_miss
+  rotate: false
+  xy: 463, 1
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_notice_overkill
+  rotate: false
+  xy: 540, 1
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_notice_parry
+  rotate: false
+  xy: 617, 692
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_notice_stun
+  rotate: false
+  xy: 694, 692
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_objective
+  rotate: false
+  xy: 771, 692
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_repair
+  rotate: false
+  xy: 848, 692
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_sergeant
+  rotate: false
+  xy: 613, 615
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_special
+  rotate: false
+  xy: 613, 538
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_stealer
+  rotate: false
+  xy: 690, 615
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_stealer_queen
+  rotate: false
+  xy: 613, 461
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_stealer_tough
+  rotate: false
+  xy: 690, 538
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_target
+  rotate: false
+  xy: 767, 615
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_terminal
+  rotate: false
+  xy: 690, 461
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_turn
+  rotate: false
+  xy: 767, 538
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+sys_void
+  rotate: false
+  xy: 844, 615
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+techtile
+  rotate: false
+  xy: 767, 461
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+tileplain
+  rotate: false
+  xy: 844, 538
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+wires
+  rotate: false
+  xy: 844, 461
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+wiresblue
+  rotate: false
+  xy: 925, 692
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+wiresred
+  rotate: false
+  xy: 921, 615
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+xtile
+  rotate: false
+  xy: 921, 538
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1

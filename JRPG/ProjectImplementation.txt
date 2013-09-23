@@ -1,0 +1,57 @@
+===============================
+Per Project Items
+===============================
+
+===============================
+User Interface
+===============================
+UI has been assumed to always differ per project.
+Therefore it must have a concrete implementation per project
+
+Projects will need to interact with the HUD class to manage their UI.
+
+===============================
+Command Binding
+===============================
+If an existing driver works than commands will need to mapped
+
+===============================
+Drivers
+===============================
+If a project is really different than it may need to
+implement or extend one of the drivers
+
+<Data>
+	<Templates>
+		<Entity template="platform">
+			<Spatial>
+				<Position value="0,0,0" />
+			</Spatial>
+			<Draw2D>
+				<sprite res="PlatformSprite" />
+			</Draw2D>
+			<Mover>
+				<Method name="addPoint">
+					<Param value="0,0,0"/>
+				</Method>
+				<Method name="addPoint">
+					<Param value="0,0,0"/>
+				</Method>
+				<LinearLoop value="1" />
+			</Mover>
+			<Collider>
+				<Mask value="" />
+				<IgnoreMask value="" />
+			</Collider>
+			<Physics>
+				<Shape type="PolyShape">
+					<Method name="setAsBox">
+						<Param value="0.5" /> <!-- Width -->
+						<Param value="0.2" /> <!-- Height -->
+					</Method>
+				</Shape>
+				<Kinematic value="1" /> <!-- Kinematic means has physical presence but no form-->
+			</Physics>
+		</Entity>
+	</Templates>
+</Data>

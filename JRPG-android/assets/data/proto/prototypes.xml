@@ -1,0 +1,95 @@
+<Data>
+    <Resources>
+		<TextureAnim src="" />
+		<Model src="" />
+		<Texture src="" />
+		<Sound src="" />
+	</Resources>
+    
+    <Templates>
+		<Entity template="SmallPlatform">
+			<Component type="Spatial">
+			</Component>
+            <Component type="Draw2D">
+                <Reflection>
+                    <Default type="com.badlogic.libgdx.TextureRegion" resource="small_platform.png" />
+                </Reflection>
+            </Component>
+            <Component type="Physics">
+                <Reflection>
+                    <def type="com.badlogic.libgdx.box2d.BodyDef">
+                        <type value="KinematicBody" />
+                    </def>
+                </Reflection>
+            </Component>
+            <Component type="Platform">
+            </Component>
+            <Component type="Collider">
+            </Component>
+		</Entity>
+        
+        <Entity template="LargePlatform">
+			<Component type="Spatial">
+			</Component>
+            <Component type="Draw2D">
+                <Reflection>
+                    <Default type="com.badlogic.libgdx.TextureRegion" resource="large_platform.png" />
+                </Reflection>
+            </Component>
+            <Component type="Physics">
+                <Reflection>
+                    <def type="com.badlogic.libgdx.box2d.BodyDef">
+                        <type value="KinematicBody" />
+                    </def>
+                </Reflection>
+            </Component>
+            <Component type="Platform">
+            </Component>
+            <Component type="Collider">
+            </Component>
+		</Entity>
+        
+        <Entity template="Mine">
+			<Component type="Spatial">
+			</Component>
+            <Component type="Draw2D">
+                <Reflection>
+                    <Default type="com.badlogic.libgdx.TextureRegion" resource="small_platform.png" />
+                </Reflection>
+            </Component>
+            <Component type="Physics">
+                <Reflection>
+                    <def type="com.badlogic.libgdx.box2d.BodyDef">
+                        <type value="KinematicBody" />
+                    </def>
+                </Reflection>
+            </Component>
+            <Component type="Platform">
+            </Component>
+            <Component type="Collider">
+            </Component>
+            <Component type="Killable">
+                <Reflection>
+                    <Health value="5.0f" />
+                    <MaxHealth value="5.0f" />
+                    <TemplateToCreate value="MineExplosion" />
+                </Reflection>
+            </Component>
+            <Component type="CameFromPlayer">
+            </Component>
+		</Entity>
+        
+        <Entity template="MineExplosion">
+            <Component type="Exploder">
+                <Reflection>
+                    <DamagePerRay value="10.0" />
+                    <ParticleCount value="16.0" />
+                    <BlastPower value="32.0" />
+                </Reflection>
+            </Component>
+            <Component type="LifeTime">
+                <LifeTime value="6000" />
+            </Component>
+        </Entity>
+	</Templates>
+</Data>

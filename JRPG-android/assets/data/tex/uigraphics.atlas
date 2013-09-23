@@ -1,0 +1,397 @@
+
+uigraphics.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+ivbackground
+  rotate: false
+  xy: 1, 781
+  size: 400, 240
+  orig: 400, 240
+  offset: 0, 0
+  index: -1
+title
+  rotate: false
+  xy: 403, 853
+  size: 466, 168
+  orig: 466, 168
+  offset: 0, 0
+  index: -1
+title_pro
+  rotate: false
+  xy: 1, 611
+  size: 466, 168
+  orig: 466, 168
+  offset: 0, 0
+  index: -1
+back
+  rotate: false
+  xy: 1, 550
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+ballistics
+  rotate: false
+  xy: 403, 792
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+coop
+  rotate: false
+  xy: 1, 489
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+deathmatch
+  rotate: false
+  xy: 1, 428
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+deployables
+  rotate: false
+  xy: 1, 367
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+difficulty
+  rotate: false
+  xy: 1, 306
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+domination
+  rotate: false
+  xy: 1, 245
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+editor
+  rotate: false
+  xy: 1, 184
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+editormanual
+  rotate: false
+  xy: 1, 123
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+energyweapons
+  rotate: false
+  xy: 1, 62
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+exitgame
+  rotate: false
+  xy: 1, 1
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+explosives
+  rotate: false
+  xy: 240, 550
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+fighting
+  rotate: false
+  xy: 240, 489
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+gametype
+  rotate: false
+  xy: 240, 428
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+host
+  rotate: false
+  xy: 240, 367
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+instantitems
+  rotate: false
+  xy: 240, 306
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+join
+  rotate: false
+  xy: 240, 245
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+lanmulti
+  rotate: false
+  xy: 240, 184
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+leave
+  rotate: false
+  xy: 240, 123
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+levelattack
+  rotate: false
+  xy: 240, 62
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+lighting
+  rotate: false
+  xy: 240, 1
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+manual
+  rotate: false
+  xy: 642, 792
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+map
+  rotate: false
+  xy: 469, 731
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+multiplayer
+  rotate: false
+  xy: 469, 670
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+ivsmall
+  rotate: false
+  xy: 871, 894
+  size: 128, 127
+  orig: 128, 127
+  offset: 0, 0
+  index: -1
+radar
+  rotate: false
+  xy: 708, 663
+  size: 120, 127
+  orig: 120, 127
+  offset: 0, 0
+  index: -1
+chat
+  rotate: false
+  xy: 469, 614
+  size: 53, 54
+  orig: 53, 54
+  offset: 0, 0
+  index: -1
+musicvol
+  rotate: false
+  xy: 524, 602
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+objectives
+  rotate: false
+  xy: 479, 541
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+onlinemulti
+  rotate: false
+  xy: 479, 480
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+options
+  rotate: false
+  xy: 479, 419
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+passplay
+  rotate: false
+  xy: 479, 358
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+password
+  rotate: false
+  xy: 479, 297
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+play
+  rotate: false
+  xy: 479, 236
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+playercount
+  rotate: false
+  xy: 479, 175
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+playername
+  rotate: false
+  xy: 479, 114
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+quickgame
+  rotate: false
+  xy: 479, 53
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+refresh
+  rotate: false
+  xy: 763, 602
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+search
+  rotate: false
+  xy: 718, 541
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+select
+  rotate: false
+  xy: 718, 480
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+sfxvolume
+  rotate: false
+  xy: 718, 419
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+singleplayer
+  rotate: false
+  xy: 718, 358
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+startgame
+  rotate: false
+  xy: 718, 297
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+startinggame
+  rotate: false
+  xy: 718, 236
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+tutorial
+  rotate: false
+  xy: 718, 175
+  size: 237, 59
+  orig: 237, 59
+  offset: 0, 0
+  index: -1
+flamerportrait
+  rotate: false
+  xy: 479, 3
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+heavyportrait
+  rotate: false
+  xy: 830, 742
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+jammedportrait
+  rotate: false
+  xy: 718, 125
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+regportrait
+  rotate: false
+  xy: 529, 3
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+regportraitdead
+  rotate: false
+  xy: 830, 692
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+reloadportrait
+  rotate: false
+  xy: 718, 75
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+stunnedportrait
+  rotate: false
+  xy: 768, 125
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+bolt
+  rotate: false
+  xy: 871, 858
+  size: 34, 34
+  orig: 34, 34
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,86 @@
+<html>
+<head>
+<title></title>
+<title>Intrinsic Violence: Play Manual</title>
+</head>
+<body>
+<div>
+<img src="file:///android_asset/title.png" />
+<ul>
+	<li><a href="#getstarted">Quick Overview</a></li>
+	<li><a href="#options">Main Commands</a></li>
+	<li><a href="#objectives">Objectives</a></li>
+	<li><a href="#tiles">Tile Tools</a>
+		<ul>
+			<li><a href="#paint">Paint</a></li>
+			<li><a href="#rotate">Rotate</a></li>
+			<li><a href="#erase">Erase</a></li>
+			<li><a href="#settings">Settings</a></li>
+			<li><a href="#pieces">Pieces</a></li>
+			<li><a href="#special">Special</a></li>
+		</ul>
+	</li>
+</ul>
+</div>
+<div>
+<h2><a name="getstarted" />Quick Overview</h2>
+<p>When you launch the Map Editor you will be presented with the initial UI which consists of a banner of buttons across the top of the screen and a vertical panel of of buttons.</p>
+<p>The top banner contains commands for broad and general map commands.</p>
+<p>The smaller pane labeled 'Tile Tools' contains different operations for editing the map.</p>
+</div>
+
+<div>
+<h2><a name="options"/>Main Commands</h2>
+<p><b>Exit</b> will exit the map editor and return to the main menu. If you have made changes to the map that have not been saved then you will prompted if you want to save first.</p>
+<p><b>New</b> will create a new blank map at 32x32 tiles dimension.</p>
+<p><b>Open</b> will bring up a list of existing custom maps which you may select to open in order to edit or view.</p>
+<p><b>Save</b> prompts to save the current map to a file.</p>
+<p><b>Undo</b> if there's any previous operation that can be undone this will undo it.</p>
+<p><b>Redo</b> will redo a previously undone operation</p>
+<p><b>Tile Palette</b> brings up a window that displays the available tiles. Click on the image or text in the list to select that tile. The currently selected tile will be displayed in the main commands banner at the far right.</p>
+<p><b>Map Info</b> a dialog will appear allowing you to setup the display name (the name that will appear at map selection) and any mission info you'd like to setup. In addition you also configure the objectives for the map here. Select an objective type from the spinner/combo-box control just under the 'Objectives:' label and click the 'Add' button to the right to add it to the mission.</p>
+<p>You can edit or delete objectives by selecting one in the list (when selected it will have a black border surrounding it), and tapping either the edit or delete buttons below. If there is anything you may edit (such as 'KillsRequired' for an 'Annhilate N' objective you will be able to configure it here.</p>
+<p><b>Resize Map</b> will bring up a dialog allowing you to specify dimensions to resize the map to. The default values will match the current map-size, additions / removals based on resizing are made along the top and the right edges.</p>
+<p><b>Gen Rand</b> will bring up a dialog which will allow to configure the random generator to create a new map at at random. This can be useful for finding a layout more or less looks suitable or interesting and then refining it by removing hallways and placing spawns, etc.</p>
+</div>
+
+<div>
+<h2><a name="objectives"/>Objectives</h2>
+<p>In general the map editor should be reasonably intuitive to anyone that has worked with a level editing program before or is at least lightly familiar with paint / graphics software.</p>
+<p>However, objectives are a game specific item that do need thorough explanation in order to be used correctly without guessing.</p>
+<p><b>Annhilate N</b> is an objective criteria which specifies a number (default of 25) of aliens that the humans must kill for the objective to be marked successful.</p>
+<p><b>Destroy Targets</b> automatically marks generators placed on the map as items that must all be destroyed by the humans in order for the objective to be marked as passed.</p>
+<p><b>Survive For X</b> specifies a number of turns for which the human player must maintain at least 1 surviving marine.</p>
+<p><b>Repair Targets</b> automatically marks generators placed on the map as items that each must be repaired by the human player. Aliens cannot engage the generators unless doubled up with a 'Protect Targets' objective.</p>
+<p><b>Escape</b> the human player must get his pieces off the playing board at exit points on the map (painted in 'Special paint mode') - at least one piece has to make it.</p>
+<p><b>Acquire Relic</b> the humans must acquire an alien relic (placed on map in 'Special paint mode', as long as the human that is carrying the relic is alive this objective will be marked as successful.</p>
+<p><b>Protect Targets</b> the human player must protect the generators placed on the map. As long as at least one generator exists, this objective will be flagged as success.</p>
+
+<h3>Multiple Objectives</h3>
+<p>Objectives run in tandem. If any objective reports 'Failure' then the humans have lost. If all objectives report success, then the humans have 'Won.' While in progress objectives report 'Indeterminate' until a success or failure condition is met.</p>
+<p>For more interesting missions you should stack multiple objectives, such as 'Acquire Relic' and 'Escape.' In order to succeed the humans must first obtain the relic and then escape - however if they just escape all their pieces off the board ignoring the relic they will fail when it becomes impossible for them to acquire it without pieces on the board.</p>
+</div>
+
+<div>
+<h2><a name="tiles"/>Tile Tools</h2>
+<h3><a name="paint" />Paint</h3>
+<p>While paint mode is active tapping a square will paint the currently selected tile from the 'Tile Palette.'</p>
+<p>In certain special cases such as doors the painter will automatically place the door as an appropriate overlay item on top of an existingly painted square.</p>
+<h3><a name="rotate" />Rotate</h3>
+<p>Rotate mode will rotate any tile that is tapped by 90 degrees. Use this to orientate tiles in the most aesthetically pleasing fashion or sloppily to give a more varied impression.</p>
+<h3><a name="erase"/>Erase</h3>
+<p>Erase mode results in any tile that is tapped on being erased.</p>
+<h3><a name="settings"/>Settings</h3>
+<p>Settings mode will bring up a dialog for any tile that is tapped on that has special attributes that may be configured.</p>
+<p>This is used to add tiles that provide messages to player, configure alien entrance points, or human exit points.</p>
+<h3><a name="pieces"/>Pieces</h3>
+<p>Pieces is a special paint mode which will allow you to paint pieces onto the game board.</p>
+<p>Primarily you will use this to place the humans that the player has at the beginning of the match.</p>
+<h3><a name="special"/>Special</h3>
+<p>Special paint mode does a variety of things.</p>
+<p>It can place alien extrance points, human exit points, objective items such a generators and edit the settings for a piece that has been placed.</p>
+<p>In the case of editing piece settings you can configure what kind of grenades a human is carrying as well as how many. In the case of an alien that you may have placed on the map you can set an activation timer, which will be the number of turns before the AI (ONLY THE AI) will begin to move the piece.</p>
+<p>That's most useful for when placing tougher alien types that take more than 1 successful hit to kill which you don't want the swarming ahead right away.</p>
+<p>A player controlling the aliens may move this piece as he deems fit as he is expected to understand that it is not as disposable as the lesser aliens that spawn. It is a measure to prevent the AI from doing anything unwanted to soon.</p>
+</body>
+</html>

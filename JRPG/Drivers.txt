@@ -1,0 +1,25 @@
+===============================
+Drivers
+===============================
+
+Drivers determine the core mechanics of the gameplay.
+
+===============================
+RTS Driver
+===============================
+
+
+===============================
+RPG Driver
+===============================
+For use in either RPGs or action adventure type games. Basically anything 3rd person.
+
+===============================
+TBS Driver
+===============================
+Divided into 'turn phases,' movement/reaction/attack etc
+
+===============================
+FPS Driver
+===============================
+
