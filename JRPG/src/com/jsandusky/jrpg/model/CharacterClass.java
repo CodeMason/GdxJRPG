@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class CharacterClass extends Base implements Serializable
 {
-	public String Name;
 	public String Story;
 	
 	public int MaxLevel; //determines stat increase per level
@@ -51,4 +50,12 @@ public class CharacterClass extends Base implements Serializable
 	public ArrayList< Reference<Skill> > SkillsAtLeve = new ArrayList< Reference<Skill> >();
 	
 	public ArrayList<String> AllowedEquipment;
+	
+	@Override
+	public String toString() {
+		if (this.Name != null) {
+			return this.Name;
+		}
+		return super.toString();
+	}
 }

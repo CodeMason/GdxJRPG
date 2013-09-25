@@ -6,7 +6,7 @@ import java.util.UUID;
 
 public class Database implements Serializable
 {
-	public HashMap<UUID,Base> Objects;
+	public HashMap<UUID,Base> Objects = new HashMap<UUID,Base>();
 	public transient HashMap<String,Base> ByName;
 	
 	//builds the ByName hashmap

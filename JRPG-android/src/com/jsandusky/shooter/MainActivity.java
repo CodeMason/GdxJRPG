@@ -7,6 +7,7 @@ import android.view.WindowManager;
 
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
+import com.jsandusky.jrpg.EngineSetup;
 import com.jsandusky.jrpg.JRPGApplication;
 
 public class MainActivity extends AndroidApplication {
@@ -18,7 +19,7 @@ public class MainActivity extends AndroidApplication {
         cfg.useGL20 = false;
         cfg.useWakelock = true;
         
-        initialize(new JRPGApplication(),cfg);
+        initialize(new JRPGApplication(new EngineSetup(EngineSetup.BattleSystem.DQ)),cfg);
         //initialize(new Myth(null, null), cfg);
     }
 }

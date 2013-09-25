@@ -4,15 +4,15 @@ import java.util.UUID;
 
 public class Base implements Serializable
 {
-	String name_;
+	public String Name;
 	UUID id_ = UUID.randomUUID();
 	
 	public void setName(String name) {
-		name_ = name;
+		Name = name;
 	}
 	
 	public String getName() {
-		return name_;
+		return Name;
 	}
 	
 	public UUID getID() {

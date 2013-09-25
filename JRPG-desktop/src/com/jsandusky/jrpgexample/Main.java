@@ -2,6 +2,7 @@ package com.jsandusky.jrpgexample;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
+import com.jsandusky.jrpg.EngineSetup;
 import com.jsandusky.jrpg.JRPGApplication;
 
 public class Main {
@@ -12,6 +13,6 @@ public class Main {
 		cfg.width = 1024;
 		cfg.height = 600;
 		
-		new LwjglApplication(new JRPGApplication(), cfg);
+		new LwjglApplication(new JRPGApplication(new EngineSetup(EngineSetup.BattleSystem.DQ)), cfg);
 	}
 }

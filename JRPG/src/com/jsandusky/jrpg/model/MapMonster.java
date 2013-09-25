@@ -5,6 +5,6 @@ import java.util.ArrayList;
 
 public class MapMonster extends Base implements Serializable
 {
-	public TextureHandle Image;
+	public Reference<CharacterSet> CharSet;
 	public ArrayList< Reference<MonsterTeam> > PossibleTeams = new ArrayList< Reference<MonsterTeam> >();
 }

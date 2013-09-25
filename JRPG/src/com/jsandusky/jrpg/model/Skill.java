@@ -10,10 +10,12 @@ public class Skill extends Base implements Serializable
 		public int Base;
 		public int Variance;
 	}
+	
 	public String Name;
 	public String Description;
 	public String UsingText; //An FString
-	
+	public Usage Usage;
+	public int MagicCost;
 	public boolean TargetAll;
 	public boolean TargetRandom;
 	public int UseTimes = 1;
@@ -24,4 +26,11 @@ public class Skill extends Base implements Serializable
 	public String CharacterAnim; //may be null
 	
 	public ArrayList<Effect> Effects;
+	
+	public enum Usage {
+		Always,
+		Battle,
+		Menu,
+		Never,
+	}
 }

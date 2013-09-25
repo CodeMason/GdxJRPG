@@ -13,6 +13,7 @@ public class Monster extends Base implements Serializable
 	public int Magic;
 	public int Defense;
 	public int Strength;
+	public int Speed;
 	
 	public ArrayList<Resistance> Resistances = new ArrayList<Resistance>();
 	public ArrayList< Reference<Skill> > Skills = new ArrayList< Reference<Skill> >();
