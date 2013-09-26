@@ -11,12 +11,13 @@ public class Frame implements Serializable
 {
 	public ArrayList<FrameData> FrameData = new ArrayList<FrameData>();
 	
-	public class FrameData {
-		public transient Sprite sprite;
+	public class FrameData implements Serializable {
+		public transient Sprite sprite; //just cache the fucker
 		public TextureHandle Texture;
 		public SoundHandle Sound;
 		public Vector2 Offset;
 		public float Scale = 1f;
+		public float Opacity = 1f;
 		public float Rotation = 0f;
 		public boolean FlippedHorizontal = false;
 	}

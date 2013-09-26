@@ -2,6 +2,7 @@ package com.jsandusky.jrpg.model;
 import java.io.Serializable;
 import java.util.UUID;
 
+/* It's basically like database foreign key */
 public class Reference<T extends Base> implements Serializable
 {
 	Class clazz;

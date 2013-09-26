@@ -21,4 +21,8 @@ public class FFMQBattleSystem extends BattleSystem
 	{
 		// TODO: Implement this method
 	}
+	
+	public void pushPlayerAction(BattleAction action) {
+		
+	}
 }

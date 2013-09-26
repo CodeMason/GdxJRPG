@@ -28,7 +28,7 @@ public class ClassEditor extends JPanel {
 	JList list;
 	DefaultListModel model;
 	JScrollPane sp;
-	AutoForm form;
+	EditObject form;
 	Class clazz;
 	
 	public ClassEditor(Database data, Class c) {
@@ -51,9 +51,10 @@ public class ClassEditor extends JPanel {
 			@Override
 			public void valueChanged(ListSelectionEvent arg) {
 				int idx = arg.getFirstIndex();
+				idx = ClassEditor.this.list.getSelectedIndex();
 				if (idx >= 0) {
 					sp.invalidate();
-					form.setTarget(model.get(idx));
+					form.setObject(model.get(idx));
 				}
 			}
 		});
@@ -94,7 +95,12 @@ public class ClassEditor extends JPanel {
 		splitPane.setLeftComponent(listSide);
 		
 		sp = new JScrollPane();
-		sp.setViewportView(form = new AutoForm());
+		sp.setViewportView(form = new EditObject(data, new EditObject.SaveCallBack() {
+			@Override
+			public void onSave() {
+				ClassEditor.this.reload();
+			}
+		}));
 		
 		splitPane.setRightComponent(sp);
 		
@@ -105,7 +111,7 @@ public class ClassEditor extends JPanel {
 		model.clear();
 		ArrayList clist = data.get(clazz);
 		for (int i = 0; i < clist.size(); ++i) {
-			model.addElement(clist.get(i).toString());
+			model.addElement(clist.get(i));
 		}
 	}
 }

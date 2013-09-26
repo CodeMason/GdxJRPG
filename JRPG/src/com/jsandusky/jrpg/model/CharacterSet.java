@@ -4,8 +4,6 @@ import java.util.HashMap;
 
 public class CharacterSet extends Base
 {
-	public String Name;
-	
 	public TextureHandle Walk_N;
 	public TextureHandle Walk_S;
 	public TextureHandle Walk_E;

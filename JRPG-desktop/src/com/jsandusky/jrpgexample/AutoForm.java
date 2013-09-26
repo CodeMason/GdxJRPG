@@ -7,18 +7,22 @@ import java.awt.Font;
 import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Set;
 
-import javax.naming.Reference;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JSpinner;
@@ -28,12 +32,16 @@ import javax.swing.SpinnerNumberModel;
 
 import com.jsandusky.gdx.util.DataObject;
 import com.jsandusky.jrpg.model.Base;
+import com.jsandusky.jrpg.model.Database;
+import com.jsandusky.jrpg.model.Reference;
+import com.jsandusky.util.Ref;
 import com.jsandusky.util.Spite;
 
 //lots of of different constructors 
 public class AutoForm extends JPanel {
 	private static final long serialVersionUID = 1L;
 	Object target_;
+	Database db;
 	HashMap<Field, Component> comps;
 	HashMap<JButton, Field> buttons = new HashMap<JButton,Field>();
 	ArrayList<String> exclusive = new ArrayList<String>();
@@ -45,10 +53,38 @@ public class AutoForm extends JPanel {
 		end = e;
 	}
 	
-	public AutoForm() {
+	public AutoForm(Database db) {
 		super();
+		this.db = db;
 		setAlignmentY(this.TOP_ALIGNMENT);
 		setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
+		
+		this.addKeyListener(new KeyListener() {
+
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if (e.isControlDown() && e.getKeyCode() == KeyEvent.VK_S) {
+					if (AutoForm.this.target_ != null) {
+						AutoForm.this.saveChanges();
+						JOptionPane.showMessageDialog(null, "Object Saved");
+					}
+					e.consume();	
+				}
+			}
+
+			@Override
+			public void keyReleased(KeyEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void keyTyped(KeyEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
 	}
 	
 	public AutoForm(Object t) {
@@ -103,7 +139,7 @@ public class AutoForm extends JPanel {
 					JCheckBox cb = (JCheckBox)c;
 					f.set(target_, cb.isSelected());
 				} else if (f.getType() == String.class) {
-					JTextField tf = (JTextField)c;
+					JTextArea tf = (JTextArea)c;
 					f.set(target_, tf.getText());
 				} else if (f.getType().isEnum()) {
 					//combobox
@@ -113,7 +149,9 @@ public class AutoForm extends JPanel {
 					
 				}
 			} catch (Exception e) {
-				
+				int out = 0;
+				++out;
+				out *= 3;
 			}
 		}
 	}
@@ -220,7 +258,21 @@ public class AutoForm extends JPanel {
 						cb.setToolTipText(f.getAnnotation(Spite.class).tip());
 					add(cb);
 					comps.put(f,  cb);
-				} 
+				} else if (Reference.class.isAssignableFrom(f.getType())) {
+					Ref ref = f.getAnnotation(Ref.class);
+					JComboBox combo = new JComboBox();
+					Dimension sz = combo.getPreferredSize();
+					sz.width = 100;
+					//sz.height = 20;
+					combo.setMaximumSize(sz);
+
+					DefaultComboBoxModel m = new DefaultComboBoxModel();
+					populateModel(ref.cl(), m);
+					combo.setModel(m);
+					
+					add(combo);
+					comps.put(f, combo);
+				}
 				//add(Box.createVerticalGlue());
 			} catch (Exception e) {
 				
@@ -230,6 +282,15 @@ public class AutoForm extends JPanel {
 		this.validate();
 		this.invalidate();
 	}
+	
+	void populateModel(Class c, DefaultComboBoxModel model) {
+		ArrayList li = db.get(c);
+		for (Object l : li) {
+			String nm = ((Base)l).getName();
+			model.addElement(nm);
+		}
+	}
+	
 	void addLabel(Field f) {
 		JLabel lbl = new JLabel();
 		lbl.setAlignmentX(LEFT_ALIGNMENT);
@@ -317,5 +378,9 @@ public class AutoForm extends JPanel {
 			return f.get(target_).toString();
 		} catch (Exception e ) {}
 		return "";
+	}
+	
+	class ComboBoxModel extends DefaultComboBoxModel {
+		
 	}
 }

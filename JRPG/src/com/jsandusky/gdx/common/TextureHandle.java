@@ -33,4 +33,10 @@ public class TextureHandle implements Serializable {
         TextureID = id;
         sequence = seq;
     }
+	
+	public void load(ImageCache img) {
+		TextureHandle other = img.getTexture(name);
+		region = other.region;
+		sequence = other.sequence;
+	}
 }

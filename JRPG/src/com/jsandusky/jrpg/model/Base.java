@@ -18,4 +18,11 @@ public class Base implements Serializable
 	public UUID getID() {
 		return id_;
 	}
+	
+	@Override
+	public String toString() {
+		if (Name != null && !Name.isEmpty())
+			return Name;
+		return id_.toString();
+	}
 }

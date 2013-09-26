@@ -1,5 +1,6 @@
 package com.jsandusky.jrpg.scripting;
 
+//System functions that can be called from FScript
 public class Script
 {
 	public void startEncounter(String teamName) {
@@ -27,6 +28,46 @@ public class Script
 	}
 	
 	public void playSound(String name) {
+		
+	}
+	
+	public void removeTile(int x, int y, int layer) {
+		
+	}
+	
+	public void changeTileTexture(int x, int y, int layer, String tex) {
+		
+	}
+	
+	public void setStateString(String name, String value) {
+		
+	}
+	
+	public void setStateInt(String name, int value) {
+		
+	}
+	
+	public String getStateString(String name) {
+		return "";
+	}
+	
+	public int getStateInt(String name) {
+		return 0;
+	}
+	
+	public void playAnimation(int x, int y, String name) {
+		
+	}
+	
+	public void teleportTo(Object actor, int x, int y) {
+		
+	}
+	
+	public void goTo(Object actor, int x, int y) {
+		
+	}
+	
+	public void goToAndFace(Object actor, int x, int y) {
 		
 	}
 }

@@ -11,7 +11,6 @@ public class Skill extends Base implements Serializable
 		public int Variance;
 	}
 	
-	public String Name;
 	public String Description;
 	public String UsingText; //An FString
 	public Usage Usage;

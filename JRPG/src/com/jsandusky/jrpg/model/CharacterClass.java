@@ -1,6 +1,7 @@
 package com.jsandusky.jrpg.model;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class CharacterClass extends Base implements Serializable
 {
@@ -47,9 +48,9 @@ public class CharacterClass extends Base implements Serializable
 		return BaseVitality + delta;
 	}
 	
-	public ArrayList< Reference<Skill> > SkillsAtLeve = new ArrayList< Reference<Skill> >();
+	public HashMap<Integer, Reference<Skill> > SkillsAtLevel = new HashMap<Integer, Reference<Skill> >();
 	
-	public ArrayList<String> AllowedEquipment;
+	public ArrayList<String> AllowedEquipment = new ArrayList<String>();
 	
 	@Override
 	public String toString() {

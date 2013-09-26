@@ -7,6 +7,6 @@ public class Dialog extends Base implements Serializable
 {
 	public TextureHandle Portrait;
 	public ArrayList<String> Pieces;
-	//only called when the dialog is finished
+		//only called when the dialog is finished
 	public String Script; //receives worldstate, NPC, scriptcore
 }

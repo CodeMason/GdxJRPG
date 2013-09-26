@@ -13,6 +13,12 @@ public class DQBattleSystem extends BattleSystem
 	boolean intro = true;
 	boolean planning;
 	boolean playOut;
+	boolean conclusion;
+	BattleAction running;
+	
+//for lerping entry effects like the black screen and menus
+	float introTime = 0f;
+	static float introTotalTime = 4f;
 	
 	public DQBattleSystem(BattleState state) {
 		super(state);
@@ -20,7 +26,7 @@ public class DQBattleSystem extends BattleSystem
 
 	public void run() {
 		if (intro) {
-			
+			//??
 		}
 		
 		if (planning) {
@@ -37,24 +43,42 @@ public class DQBattleSystem extends BattleSystem
 				playOut = true;
 				planning = false;
 				finished.clear();
+				
+				//TODO sort the action list
 			}
 		}
 		
 		if (playOut) {
-			for (int i = 0; i < actions.size(); ++i) {
-				if (!actions.get(i).playing()) {
-					actions.remove(i);
-					--i;
-					break;
+			if (running == null && actions.size() > 0) {
+				running = actions.get(0);
+			} else if (running != null) {
+				if (!running.playing()) {
+					running = null;
 				}
-				
-				
-				break;
+			} else {
+				playOut = false;
+				planning = true;			
 			}
+		}
+		
+		if (conclusion) {
+			
 		}
 	}
 	
 	public void draw(Camera cam, Camera realCam, DecalBatch dBatch, SpriteBatch sBatch, BitmapFont bmf)
 	{
+		//draw bg
+		
+		//draw characters
+		
+		if (running != null) {
+			running.draw(cam,realCam,dBatch,sBatch,bmf);
+		}
+	}
+	
+	public void pushPlayerAction(BattleAction action) {
+		actions.add(action);
+		finished.add(action.getSource());
 	}
 }

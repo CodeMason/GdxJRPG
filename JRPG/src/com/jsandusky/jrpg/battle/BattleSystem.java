@@ -11,4 +11,8 @@ public abstract class BattleSystem implements IDraw
 	}
 	
 	public abstract void run();
+	
+	//called by player UI to push a player's action
+	//up to the battle system how this is handled
+	public abstract void pushPlayerAction(BattleAction action);
 }
