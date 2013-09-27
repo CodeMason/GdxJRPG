@@ -21,8 +21,8 @@ public class AnimTrack extends JPanel {
 	ArrayList<Tick> ticks;
 	Tick selected;
 	
-	final int tickSpace = 1;
-	final int tickWidth = 8;
+	final int tickSpace = 2;
+	final int tickWidth = 6;
 	final int tickHeight = 12;
 	Dimension calculatedSize;
 	
@@ -44,6 +44,7 @@ public class AnimTrack extends JPanel {
 				for (Tick t : tr.ticks) {
 					if (t.area.contains(arg0.getPoint())) {
 						selected = t;
+						tr.repaint();
 						return;
 					}
 				}
@@ -91,7 +92,12 @@ public class AnimTrack extends JPanel {
 				else
 					g2.setColor(tickColor);
 			}
-			g2.drawRect(x, 0, t.area.width, t.area.height);
+			
+			for (int i = 0; i < t.area.width; ++i){
+				g2.drawLine(x+i, 0, x+i, t.area.height);
+			}
+			//g2.drawRect(x, 0, t.area.width, t.area.height);
+			
 			x += tickWidth;
 			x += tickSpace;
 		}

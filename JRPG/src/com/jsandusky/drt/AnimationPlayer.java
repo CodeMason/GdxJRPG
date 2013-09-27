@@ -31,7 +31,10 @@ public class AnimationPlayer
 	HashMap<String, Animation> animations = new HashMap<String, Animation>();
 
 	public ArrayList<BoneTransformation> BoneTransformations;
-
+	
+	public void setCurrentTime(float time) {
+		currentAnimationTime = time;
+	}	
 
 	public void add(String name, Animation animation)
 	{

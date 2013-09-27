@@ -1,13 +1,19 @@
 package com.jsandusky.drt;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import java.io.Serializable;
 
-public class TextureEntry
+public class TextureEntry implements Serializable
 {
-	public TextureRegion Region;
+	public String TextureName;
+	public transient TextureRegion Region;
 	public TextureBounds Bounds;
 	
 	public TextureEntry(TextureRegion region, TextureBounds bounds) {
 		Region = region;
 		Bounds = bounds;
+	}
+	
+	TextureEntry() {
+		
 	}
 }

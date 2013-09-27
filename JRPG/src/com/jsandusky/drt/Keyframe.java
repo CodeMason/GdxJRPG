@@ -1,11 +1,12 @@
 package com.jsandusky.drt;
 import java.util.ArrayList;
+import java.io.Serializable;
 
-public class Keyframe
+public class Keyframe implements Serializable
 {
 	public int FrameNumber;
 	public ArrayList<Bone> Bones;
-	public String Trigger;
+	public String Trigger = "";
 	public boolean FlipVertically;
 	public boolean FlipHorizontally;
 
@@ -15,6 +16,18 @@ public class Keyframe
 	public Keyframe()
 	{
 		UpdateOrderBones = new ArrayList<Bone>();
+	}
+	
+	public Keyframe cpy(int FrameNumber) {
+		Keyframe k = new Keyframe();
+		k.FrameNumber = FrameNumber;
+		k.FlipVertically = FlipVertically;
+		k.FlipHorizontally = FlipHorizontally;
+		k.Trigger = "";
+		for (Bone b : Bones) {
+			k.Bones.add(b.cpy());
+		}
+		return k;
 	}
 
 	public void SortBones()

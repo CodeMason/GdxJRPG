@@ -2,8 +2,9 @@ package com.jsandusky.drt;
 import java.util.ArrayList;
 import com.badlogic.gdx.math.*;
 import com.badlogic.gdx.graphics.g2d.*;
+import java.io.Serializable;
 
-public class Animation
+public class Animation implements Serializable
 {
 	public String Version;
 
@@ -12,10 +13,59 @@ public class Animation
 	public boolean Loop;
 	public int LoopFrame;
 	public float LoopTime;
-	float t = 0f;
 
 	public ArrayList<TextureEntry> Textures;
 	public ArrayList<Keyframe> Keyframes;
+	
+	public void recalculateFrameTimes() {
+		float fr = 1.0f / FrameRate;
+		LoopTime = LoopFrame * FrameRate;
+		Loop = LoopFrame != -1;
+		for (Keyframe kf : Keyframes) {
+			kf.FrameTime = fr * kf.FrameNumber;
+		}
+	}
+	
+	public void addTexture(TextureEntry ent) {
+		Textures.add(ent);
+	}
+	
+	public void deleteBone(String name, Keyframe frame) {
+		for (int i = 0; i < frame.Bones.size(); ++i) {
+			Bone b = frame.Bones.get(i);
+			if (b.Name.equals(name)) {
+				frame.Bones.remove(b);
+				break;
+			}
+		}
+	}
+	
+	public void deleteBone(String name) {
+		for (Keyframe fr : Keyframes) {
+			for (int i = 0; i < fr.Bones.size(); ++i) {
+				Bone b = fr.Bones.get(i);
+				if (b.Name.equals(name)) {
+					fr.Bones.remove(b);
+					break;
+				}
+			}
+		}
+	}
+	
+	public void addBone(String name, int tex, Bone parent, Keyframe frame) {
+		Bone b = new Bone();
+		b.ParentIndex = parent.SelfIndex;
+		b.Position = parent.Position.cpy();
+		b.TextureIndex = tex;
+		b.SelfIndex = frame.Bones.size();
+		b.Name = name;
+		b.Rotation = 0;
+		b.Scale = new Vector2(1,1);
+		b.Hidden = false;
+		frame.Bones.add(b);
+		
+		frame.SortBones(); //??sort our bones
+	}
 
 	public void GetBoneTransformations(ArrayList<BoneTransformation> transforms, ArrayList<BoneTransitionState> transitions, int keyframeIndex, float time)
 	{
