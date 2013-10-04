@@ -10,7 +10,7 @@ public class SoundHandle {
 	}
 	public String Name;
 	public long ID;
-	public Sound Snd;
+	public transient Sound Snd;
 	public float CutOff = Float.POSITIVE_INFINITY;
 	
 	public void play() {
@@ -18,4 +18,13 @@ public class SoundHandle {
 	}
 	
 	public static float Volume = 1.0f;
+	
+	public void load(Sounds snds) {
+		Snd = snds.loadSound(Name).Snd;
+	}
+	
+	public void load(ResourceManager rm) {
+		SoundHandle sh = rm.getSound(Name);
+		Snd = sh.Snd;
+	}
 }

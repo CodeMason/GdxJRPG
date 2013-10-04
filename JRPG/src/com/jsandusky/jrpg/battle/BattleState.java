@@ -2,9 +2,12 @@ package com.jsandusky.jrpg.battle;
 import com.jsandusky.jrpg.*;
 import com.jsandusky.jrpg.model.*;
 import java.util.ArrayList;
+import com.badlogic.gdx.graphics.g2d.*;
+import com.badlogic.gdx.graphics.*;
+import com.badlogic.gdx.graphics.g3d.decals.*;
 
 public class BattleState extends JRPGState
-{
+{	
 	Party party;
 	ArrayList<BattleAgent> agents = new ArrayList<BattleAgent>(6);
 	BattleSystem battleSys;
@@ -36,5 +39,15 @@ public class BattleState extends JRPGState
 				//how the hell did you get here
 				break;
 		}
+	}
+	
+	public void update()
+	{
+		battleSys.run();
+	}
+
+	public void draw(Camera cam, Camera realCam, DecalBatch dBatch, SpriteBatch sBatch, BitmapFont bmf)
+	{
+		battleSys.draw(cam,realCam,dBatch,sBatch,bmf);
 	}
 }

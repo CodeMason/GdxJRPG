@@ -21,6 +21,7 @@ public class GameMap implements IDraw, Serializable, PathTileMap
 	TextureHandle fogOverlay;
 	float fogXSpeed;
 	float fogYSpeed;
+	transient boolean inEditor; //tells to draw void tiles, and show [E] squares and [*] named points
 	
 	Square[][] Tiles;
 	Array<Actor> Actors = new Array<Actor>(32);
@@ -34,10 +35,43 @@ public class GameMap implements IDraw, Serializable, PathTileMap
 	public void draw(Camera cam, Camera realCam, DecalBatch dBatch, SpriteBatch sBatch, BitmapFont bmf)
 	{
 		//draw the first two layers
+		for (int l = 0; l < 2; ++l) {
+			for (int x = 0; x < width; ++x) {
+				for (int y = 0; y < height; ++y) {
+					if (Tiles[x][y] != null) {
+						Tiles[x][y].Tiles.get(l).sprite.setPosition(x*tileDim,y*tileDim);
+						Tiles[x][y].Tiles.get(l).sprite.draw(sBatch);
+					}
+				}
+			}		
+		}
 		
 		//draw entities
+		for (Actor act : Actors) {
+			//??draw the actor
+		}
 		
 		//draw the last two layers
+		for (int l = 2; l < 4; ++l) {
+			for (int x = 0; x < width; ++x) {
+				for (int y = 0; y < height; ++y) {
+					if (Tiles[x][y] != null) {
+						Tiles[x][y].Tiles.get(l).sprite.setPosition(x*tileDim,y*tileDim);
+						Tiles[x][y].Tiles.get(l).sprite.draw(sBatch);
+					}
+				}
+			}		
+		}
+		
+		//Draw overlays last
+		for (Overlay l : Overlays) {
+			
+		}
+		
+		if (inEditor) {
+			//draw events
+			//draw named points
+		}
 	}
 	
 	public int getWidth() {
@@ -49,11 +83,13 @@ public class GameMap implements IDraw, Serializable, PathTileMap
 	}
 	
 	public GameMap(int width, int height, int tileDim) {
-		
+		this.width = width;
+		this.height = height;
+		this.tileDim = tileDim;
 	}
 	
 	private GameMap() { //for serialization
-		
+		//??shoudl init with everything else
 	}
 	
 	public void resize(int newWidth, int newHeight) {

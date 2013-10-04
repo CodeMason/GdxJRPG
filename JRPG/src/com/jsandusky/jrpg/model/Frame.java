@@ -6,9 +6,11 @@ import com.badlogic.gdx.math.*;
 import com.jsandusky.gdx.common.TextureHandle;
 import com.jsandusky.gdx.common.SoundHandle;
 import java.util.ArrayList;
+import com.jsandusky.util.Ref;
 
 public class Frame implements Serializable
 {
+	@Ref(cl = FrameData.class)
 	public ArrayList<FrameData> FrameData = new ArrayList<FrameData>();
 	
 	public class FrameData implements Serializable {

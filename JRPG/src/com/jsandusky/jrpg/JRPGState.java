@@ -1,5 +1,7 @@
 package com.jsandusky.jrpg;
+import com.jsandusky.gdx.common.*;
 
-public class JRPGState
+public abstract class JRPGState implements IDraw
 {
+	public abstract void update();
 }

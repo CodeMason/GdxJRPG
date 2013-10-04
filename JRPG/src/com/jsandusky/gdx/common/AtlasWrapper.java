@@ -50,7 +50,8 @@ public class AtlasWrapper {
     public TextureHandle findRegion(int id) {
         if (cachedSingle.containsKey(id))
             return cachedSingle.get(id);
-        TextureHandle ret = new TextureHandle("", id, this.id, atlas.getRegions().get(id));
+		AtlasRegion reg = atlas.getRegions().get(id);
+        TextureHandle ret = new TextureHandle(reg.name, id, this.id, reg);
         cachedSingle.put(id,ret);
         return ret;
     }
@@ -77,13 +78,10 @@ public class AtlasWrapper {
 	}
     
     private static long getSDBMHash(String str) {
-
         long hash = 0;
-
         for (int i = 0; i < str.length(); i++) {
             hash = str.charAt(i) + (hash << 6) + (hash << 16) - hash;
         }
-
         return hash;
     }
 }

@@ -2,6 +2,8 @@ package com.jsandusky.jrpg.model;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
+import com.jsandusky.util.Ref;
+import com.jsandusky.util.RefTwin;
 
 public class CharacterClass extends Base implements Serializable
 {
@@ -48,8 +50,10 @@ public class CharacterClass extends Base implements Serializable
 		return BaseVitality + delta;
 	}
 	
+	@RefTwin(KeyClass = Integer.class, ValueClass = Skill.class)
 	public HashMap<Integer, Reference<Skill> > SkillsAtLevel = new HashMap<Integer, Reference<Skill> >();
 	
+	@Ref(cl = String.class)
 	public ArrayList<String> AllowedEquipment = new ArrayList<String>();
 	
 	@Override

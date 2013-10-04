@@ -1,6 +1,7 @@
 package com.jsandusky.jrpg.model;
 import java.io.Serializable;
 import java.util.ArrayList;
+import com.jsandusky.util.*;
 
 public class Skill extends Base implements Serializable
 {
@@ -21,9 +22,12 @@ public class Skill extends Base implements Serializable
 	public boolean TargetFriend;
 	public boolean TargetDeadFriend;
 	public String Script; //skill(Target,Caster)
+	
+	@Ref(cl = Animation.class)
 	public Reference<Animation> Anim;
 	public String CharacterAnim; //may be null
 	
+	@Ref(cl = Effect.class)
 	public ArrayList<Effect> Effects;
 	
 	public enum Usage {

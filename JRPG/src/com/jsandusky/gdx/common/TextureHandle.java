@@ -35,8 +35,22 @@ public class TextureHandle implements Serializable {
     }
 	
 	public void load(ImageCache img) {
-		TextureHandle other = img.getTexture(name);
-		region = other.region;
-		sequence = other.sequence;
+		if (!isAnim) {
+			TextureHandle other = img.getTexture(name);
+			region = other.region;
+		} else {
+			TextureHandle other = img.getFrames(name);
+			sequence = other.sequence;
+		}
+	}
+	
+	public void load(ResourceManager rm) {
+		if (isAnim) {
+			TextureHandle other = rm.findRegions(name);
+			sequence = other.sequence;
+		} else {
+			TextureHandle other = rm.findRegion(name);
+			region = other.region;
+		}
 	}
 }

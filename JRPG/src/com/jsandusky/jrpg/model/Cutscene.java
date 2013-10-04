@@ -2,6 +2,7 @@ package com.jsandusky.jrpg.model;
 import java.io.Serializable;
 import com.jsandusky.gdx.common.TextureHandle;
 import java.util.ArrayList;
+import com.jsandusky.util.Ref;
 
 /* more like moving images and text showing up 
 background images,
@@ -26,5 +27,6 @@ public class Cutscene extends Base implements Serializable
 		public String Text;
 	}
 	
+	@Ref(cl = Slide.class)
 	public ArrayList<Slide> Slides = new ArrayList<Slide>();
 }

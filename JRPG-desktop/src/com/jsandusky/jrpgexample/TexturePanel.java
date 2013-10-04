@@ -12,6 +12,7 @@ import javax.swing.JPanel;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.jsandusky.drt.AnimEditorApp;
+import com.jsandusky.gdx.common.PixmapTextureAtlas;
 
 /*
  * Shows the textures available to the animation editor

@@ -17,13 +17,19 @@ import javax.swing.JScrollPane;
 import javax.swing.JList;
 import javax.swing.JToolBar;
 
+import com.jsandusky.drt.AnimEditorApp;
+
 public class MapEditor extends JFrame {
 
 	private JPanel contentPane;
-
+	AnimEditorApp app;
+	
+	
 	/**
 	 * Launch the application.
 	 */
+	
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -105,13 +111,14 @@ public class MapEditor extends JFrame {
 		splitPane_1.setResizeWeight(0.9);
 		contentPane.add(splitPane_1, BorderLayout.CENTER);
 		
-		JPanel panel = new JPanel();
-		splitPane_1.setLeftComponent(panel);
+		app = new AnimEditorApp();
+		com.badlogic.gdx.backends.lwjgl.LwjglAWTCanvas canvas = new com.badlogic.gdx.backends.lwjgl.LwjglAWTCanvas(app, false);
+		splitPane_1.setLeftComponent(canvas.getCanvas());
 		
 		JScrollPane scrollPane = new JScrollPane();
 		splitPane_1.setRightComponent(scrollPane);
 		
-		JPanel panel_1 = new JPanel();
+		TilePicker panel_1 = new TilePicker(app);
 		scrollPane.setViewportView(panel_1);
 		
 		JToolBar toolBar = new JToolBar();
