@@ -7,8 +7,12 @@ public class BasicTile extends Tile
 {
 	TextureHandle texture;
 	
-	BasicTile(TextureHandle texture) {
+	public BasicTile(TextureHandle texture) {
 		this.texture = texture;
+	}
+	
+	public BasicTile(String texName) {
+		
 	}
 	
 	BasicTile() { //for serialization

@@ -28,4 +28,17 @@ public class Convert
 		
 		return ret;
 	}
+	
+	public static Vector3 mult(Matrix3 mat, Vector3 vec) {
+		Vector3 ret = new Vector3();
+		ret.x = mat.val[mat.M00] * vec.x + mat.val[mat.M10] * vec.y + mat.val[mat.M20] * vec.z;
+		ret.y = mat.val[mat.M01] * vec.x + mat.val[mat.M11] * vec.y + mat.val[mat.M21] * vec.z;
+		ret.z = mat.val[mat.M02] * vec.x + mat.val[mat.M12] * vec.y + mat.val[mat.M22] * vec.z;
+		return ret;
+	}
+	
+	public static void mult(Matrix3 mat, Vector2 vec) {
+		Vector3 out = mult(mat,new Vector3(vec.x,vec.y,0));
+		vec.set(out.x,out.y);
+	}
 }

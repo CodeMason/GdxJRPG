@@ -3,7 +3,7 @@ import com.badlogic.gdx.math.*;
 import java.io.Serializable;
 import com.jsandusky.jrpg.model.Database;
 
-public abstract class Actor implements Serializable
+public abstract class GameActor implements Serializable
 {
 	public GridPoint2 Position;
 	

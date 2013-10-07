@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class WorldData implements Serializable
 {
 	//use these as little as necessary
-	/* ie monster dies putInt("dudekilled",0)
+	/* ie a key monster dies putInt("dudekilled",0)
 		later in another map during load check the int and show/hide something
 	*/
 	HashMap<String,String> misc = new HashMap<String,String>();

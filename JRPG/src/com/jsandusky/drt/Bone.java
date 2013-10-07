@@ -11,6 +11,7 @@ public class Bone implements Serializable
 	public transient int SelfIndex;
 	
 	public transient int UpdateIndex;
+	public transient Rectangle Bounds;
 	public Vector2 Position;
 	public float Rotation;
 	public Vector2 Scale;

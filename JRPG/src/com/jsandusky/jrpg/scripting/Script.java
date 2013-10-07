@@ -39,6 +39,7 @@ public class Script
 		
 	}
 	
+//From the WorldState
 	public void setStateString(String name, String value) {
 		
 	}
@@ -55,6 +56,8 @@ public class Script
 		return 0;
 	}
 	
+	//plays an animation somewhere on the map
+	//same animations as the battle anims
 	public void playAnimation(int x, int y, String name) {
 		
 	}

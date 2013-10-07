@@ -4,7 +4,8 @@ import java.io.Serializable;
 
 public class TextureEntry implements Serializable
 {
-	public String TextureName;
+	public String TextureName; //for in application use
+	public String ToolPath; //relative to the animation file's location
 	public transient TextureRegion Region;
 	public TextureBounds Bounds;
 	

@@ -21,11 +21,13 @@ public class AnimEditorApp implements ApplicationListener {
 	OrthographicCamera cam;
 	Animation active;
 	AnimationPlayer player;
+	ToolsFuncs tools;
 	
 	public enum Mode {
 		None,
 		Move,
-		Rotate
+		Rotate,
+		Scale //There are legitimate purposes for it - like "OMG!" comical reactions
 	}
 	Mode mode_ = Mode.None;
 	

@@ -3,7 +3,7 @@ import com.jsandusky.jrpg.model.Reference;
 import com.jsandusky.jrpg.model.NPC;
 import com.jsandusky.jrpg.model.Database;
 
-public class NPCActor extends Actor
+public class NPCActor extends GameActor
 {
 	Reference<NPC> NPC;
 	
