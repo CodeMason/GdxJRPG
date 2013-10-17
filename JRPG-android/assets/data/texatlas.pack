@@ -1,0 +1,61 @@
+
+texatlas.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+guy_head
+  rotate: false
+  xy: 1, 93
+  size: 64, 154
+  orig: 64, 154
+  offset: 0, 0
+  index: -1
+guy_torso
+  rotate: false
+  xy: 67, 110
+  size: 46, 137
+  orig: 46, 137
+  offset: 0, 0
+  index: -1
+guy_upper_leg
+  rotate: false
+  xy: 115, 87
+  size: 28, 160
+  orig: 28, 160
+  offset: 0, 0
+  index: -1
+guy_lower_leg
+  rotate: false
+  xy: 145, 117
+  size: 24, 130
+  orig: 24, 130
+  offset: 0, 0
+  index: -1
+guy_upper_arm
+  rotate: false
+  xy: 171, 141
+  size: 22, 106
+  orig: 22, 106
+  offset: 0, 0
+  index: -1
+guy_lower_arm
+  rotate: false
+  xy: 1, 1
+  size: 18, 90
+  orig: 18, 90
+  offset: 0, 0
+  index: -1
+guy_foot
+  rotate: false
+  xy: 21, 65
+  size: 86, 26
+  orig: 86, 26
+  offset: 0, 0
+  index: -1
+guy_hand
+  rotate: false
+  xy: 195, 215
+  size: 18, 32
+  orig: 18, 32
+  offset: 0, 0
+  index: -1

@@ -115,7 +115,6 @@ public class FileBrowser extends Menu
 			owner = owned;
 		}
 		
-		@Override
 		public void tap(Actor a, float x, float y) {
 			owner.content.clear();
 			owner.current = file;
@@ -131,7 +130,7 @@ public class FileBrowser extends Menu
 		public UpHandler(FileBrowser owned, FileHandle cur) {
 			file = cur;
 		}
-		@Override
+		
 		public void tap(Actor a, float x, float y) {
 			owner.content.clear();
 			owner.current = file;
@@ -150,7 +149,7 @@ public class FileBrowser extends Menu
 			this.file = file;
 			this.t = t;
 		}
-		@Override
+		
 		public void tap(Actor a, float x, float y) {
 			for (Table t : owner.tables)
 				t.setColor(Color.WHITE);
